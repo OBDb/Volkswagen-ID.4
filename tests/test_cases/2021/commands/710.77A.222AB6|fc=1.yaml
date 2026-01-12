@@ -1,20 +1,25 @@
 command_id: 710.77A.222AB6|fc=1
 test_cases:
 - expected_values:
+    ID4_RANGE: 7
+  response: |-
+    77A100A622AB6000700
+    77A210700001BAAAAAA
+- expected_values:
+    ID4_RANGE: 15
+  response: |-
+    77A100A622AB6000F00
+    77A210F00001BAAAAAA
+- expected_values:
+    ID4_RANGE: 16
+  response: |-
+    77A100A622AB6001000
+    77A211000001BAAAAAA
+- expected_values:
     ID4_RANGE: 20
   response: |-
     77A100A622AB6001400
     77A2114000000AAAAAA
-- expected_values:
-    ID4_RANGE: 31
-  response: |-
-    77A100A622AB6001F00
-    77A211F000001AAAAAA
-- expected_values:
-    ID4_RANGE: 32
-  response: |-
-    77A100A622AB6002000
-    77A2120000001AAAAAA
 - expected_values:
     ID4_RANGE: 56
   response: |-
