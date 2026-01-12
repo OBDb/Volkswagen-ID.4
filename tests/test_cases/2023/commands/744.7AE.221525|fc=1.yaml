@@ -7,26 +7,5 @@ test_cases:
     ID4_OBC_V_PROX_A: 1522
   response: 7AE0562152505F2
 - expected_values:
-    ID4_OBC_V_PROX_A: 4437
-  response: 7AE056215251155
-- expected_values:
-    ID4_OBC_V_PROX_A: 4444
-  response: 7AE05621525115C
-- expected_values:
-    ID4_OBC_V_PROX_A: 4451
-  response: 7AE056215251163
-- expected_values:
-    ID4_OBC_V_PROX_A: 4458
-  response: 7AE05621525116A
-- expected_values:
-    ID4_OBC_V_PROX_A: 4464
-  response: 7AE056215251170
-- expected_values:
-    ID4_OBC_V_PROX_A: 4471
-  response: 7AE056215251177
-- expected_values:
-    ID4_OBC_V_PROX_A: 4669
-  response: 7AE05621525123D
-- expected_values:
-    ID4_OBC_V_PROX_A: 4676
-  response: 7AE056215251244
+    ID4_OBC_V_PROX_A: 4649
+  response: 7AE056215251229

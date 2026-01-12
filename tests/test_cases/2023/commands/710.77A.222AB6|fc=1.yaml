@@ -147,3 +147,8 @@ test_cases:
   response: |-
     77A100A622AB6010001
     77A2100000001AAAAAA
+- expected_values:
+    ID4_RANGE: 301
+  response: |-
+    77A100A622AB6012D01
+    77A212D000000AAAAAA
