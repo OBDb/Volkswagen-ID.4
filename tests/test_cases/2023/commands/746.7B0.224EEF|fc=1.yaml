@@ -1,6 +1,13 @@
 command_id: 746.7B0.224EEF|fc=1
 test_cases:
 - expected_values:
+    ID4_AC_REFRIG_P_SENS1: 0.572
+    ID4_AC_REFRIG_T_SENS1: 3
+    ID4_AC_REFRIG_T_SENS1_INT: 10.6
+  response: |-
+    7B0100D624EEF004101
+    7B021AE01FA00000000
+- expected_values:
     ID4_AC_REFRIG_P_SENS1: 0.616
     ID4_AC_REFRIG_T_SENS1: 7.2
     ID4_AC_REFRIG_T_SENS1_INT: 12.7
