@@ -4,8 +4,8 @@ test_cases:
     ID4_ACCEL: 0
   response: 17FE0076056245390000
 - expected_values:
-    ID4_ACCEL: 1.528
-  response: 17FE00760562453905F8
+    ID4_ACCEL: 0.508
+  response: 17FE00760562453901FC
 - expected_values:
     ID4_ACCEL: -0.256
   response: 17FE007605624539FF00
