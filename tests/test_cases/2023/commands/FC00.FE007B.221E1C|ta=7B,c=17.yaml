@@ -1,32 +1,14 @@
 command_id: FC00.FE007B.221E1C|ta=7B,c=17
 test_cases:
 - expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 633.8
+  response: 17FE007B05621E1C0C61
+- expected_values:
     ID4_HVBAT_I_LIM_DSCH: 666.8
   response: 17FE007B05621E1C0D06
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 680.4
-  response: 17FE007B05621E1C0D4A
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 748
-  response: 17FE007B05621E1C0E9C
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 748.2
-  response: 17FE007B05621E1C0E9D
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 748.8
-  response: 17FE007B05621E1C0EA0
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 749
-  response: 17FE007B05621E1C0EA1
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 749.2
-  response: 17FE007B05621E1C0EA2
 - expected_values:
     ID4_HVBAT_I_LIM_DSCH: 751
   response: 17FE007B05621E1C0EAB
 - expected_values:
     ID4_HVBAT_I_LIM_DSCH: 771.6
   response: 17FE007B05621E1C0F12
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 800
-  response: 17FE007B05621E1C0FA0
