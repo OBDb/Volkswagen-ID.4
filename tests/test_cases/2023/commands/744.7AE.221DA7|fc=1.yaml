@@ -7,5 +7,5 @@ test_cases:
     ID4_OBC_HIGH_V_OUTPUT: 358.3
   response: 7AE05621DA70DFF
 - expected_values:
-    ID4_OBC_HIGH_V_OUTPUT: 358.4
-  response: 7AE05621DA70E00
+    ID4_OBC_HIGH_V_OUTPUT: 384
+  response: 7AE05621DA70F00

@@ -15,3 +15,6 @@ test_cases:
 - expected_values:
     ID4_HVBAT_V_CELLS_SUM: 368166.99219
   response: 17FE007B07621E3C001702AC
+- expected_values:
+    ID4_HVBAT_V_CELLS_SUM: 388363.76953
+  response: 17FE007B07621E3C001845D2
