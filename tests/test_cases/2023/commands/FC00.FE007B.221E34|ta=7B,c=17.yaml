@@ -19,4 +19,8 @@ test_cases:
 - expected_values:
     ID4_HVBAT_CELL_V_MIN: 15.997
     ID4_HVBAT_CELL_V_MIN_ID: 88
+  response: 17FE007B07621E343FFC0058
+- expected_values:
+    ID4_HVBAT_CELL_V_MIN: 15.997
+    ID4_HVBAT_CELL_V_MIN_ID: 88
   response: 17FE007B07621E3440A00058
