@@ -1,8 +1,8 @@
 command_id: FC00.FE007B.221E1B|ta=7B,c=17
 test_cases:
 - expected_values:
-    ID4_HVBAT_I_LIM_CHG: 130.2
-  response: 17FE007B05621E1B028B
+    ID4_HVBAT_I_LIM_CHG: 110.4
+  response: 17FE007B05621E1B0228
 - expected_values:
     ID4_HVBAT_I_LIM_CHG: 256
   response: 17FE007B05621E1B0500
