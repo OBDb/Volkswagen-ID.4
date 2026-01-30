@@ -10,6 +10,9 @@ test_cases:
     ID4_CHRGR_COOLANT_T: 16
   response: 7AE046215E238
 - expected_values:
+    ID4_CHRGR_COOLANT_T: 29
+  response: 7AE046215E245
+- expected_values:
     ID4_CHRGR_COOLANT_T: 31
   response: 7AE046215E247
 - expected_values:

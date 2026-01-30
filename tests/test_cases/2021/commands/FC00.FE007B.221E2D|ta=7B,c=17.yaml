@@ -1,6 +1,14 @@
 command_id: FC00.FE007B.221E2D|ta=7B,c=17
 test_cases:
 - expected_values:
+    ID4_HVBAT_CELL_SOC_MIN: 68.77
+    ID4_HVBAT_CELL_SOC_MIN_ID: 9
+  response: 17FE007B07621E2D1ADD0009
+- expected_values:
+    ID4_HVBAT_CELL_SOC_MIN: 68.78
+    ID4_HVBAT_CELL_SOC_MIN_ID: 9
+  response: 17FE007B07621E2D1ADE0009
+- expected_values:
     ID4_HVBAT_CELL_SOC_MIN: 74.62
     ID4_HVBAT_CELL_SOC_MIN_ID: 0
   response: 17FE007B07621E2D1D260000
