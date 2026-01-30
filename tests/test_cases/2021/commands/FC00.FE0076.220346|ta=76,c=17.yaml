@@ -1,6 +1,9 @@
 command_id: FC00.FE0076.220346|ta=76,c=17
 test_cases:
 - expected_values:
+    ID4_STEER_ANGLE: 0
+  response: 17FE0076056203460000
+- expected_values:
     ID4_STEER_ANGLE: 7.4
   response: 17FE007605620346004A
 - expected_values:

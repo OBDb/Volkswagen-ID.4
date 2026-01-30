@@ -1,6 +1,13 @@
 command_id: 710.77A.222A53|fc=1
 test_cases:
 - expected_values:
+    ID4_DCDC_I: 8
+    ID4_DCDC_I_RSV: 213
+    ID4_DCDC_V_LOW: 13.5
+  response: |-
+    77A1008622A53870207
+    77A2102D4AAAAAAAAAA
+- expected_values:
     ID4_DCDC_I: 30
     ID4_DCDC_I_RSV: 237
     ID4_DCDC_V_LOW: 14.2
