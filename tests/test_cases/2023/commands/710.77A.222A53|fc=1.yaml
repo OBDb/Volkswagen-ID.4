@@ -29,6 +29,13 @@ test_cases:
     77A1008622A538A0209
     77A2102FEAAAAAAAAAA
 - expected_values:
+    ID4_DCDC_I: 17
+    ID4_DCDC_I_RSV: 261
+    ID4_DCDC_V_LOW: 13.9
+  response: |-
+    77A1008622A538B0210
+    77A210304AAAAAAAAAA
+- expected_values:
     ID4_DCDC_I: 24
     ID4_DCDC_I_RSV: 241
     ID4_DCDC_V_LOW: 14.8

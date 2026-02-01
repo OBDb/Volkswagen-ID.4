@@ -1,14 +1,11 @@
 command_id: FC00.FE007B.221E1C|ta=7B,c=17
 test_cases:
 - expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 633.8
-  response: 17FE007B05621E1C0C61
+    ID4_HVBAT_I_LIM_DSCH: 548
+  response: 17FE007B05621E1C0AB4
 - expected_values:
     ID4_HVBAT_I_LIM_DSCH: 666.8
   response: 17FE007B05621E1C0D06
-- expected_values:
-    ID4_HVBAT_I_LIM_DSCH: 751
-  response: 17FE007B05621E1C0EAB
 - expected_values:
     ID4_HVBAT_I_LIM_DSCH: 771.6
   response: 17FE007B05621E1C0F12
