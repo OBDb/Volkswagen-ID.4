@@ -31,7 +31,7 @@ test_cases:
 - expected_values:
     VSS: 112
   response: |-
-    18DAF10503410D70
+    18DAF10503410D6F
     18DAF10103410D70
 - expected_values:
     VSS: 121
