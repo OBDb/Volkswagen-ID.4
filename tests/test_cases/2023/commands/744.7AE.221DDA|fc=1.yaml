@@ -16,10 +16,10 @@ test_cases:
     7AE1008621DDA460352
     7AE210400CCCCCCCCCC
 - expected_values:
-    ID4_OBC_T_A: 30
+    ID4_OBC_T_A: 30.3
   response: |-
-    7AE1008621DDA460352
-    7AE210410CCCCCCCCCC
+    7AE1008621DDA460355
+    7AE21044DCCCCCCCCCC
 - expected_values:
     ID4_OBC_T_A: 30
   response: |-
