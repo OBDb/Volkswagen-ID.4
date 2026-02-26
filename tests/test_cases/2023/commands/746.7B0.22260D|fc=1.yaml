@@ -4,5 +4,5 @@ test_cases:
     ID4_FRONT_RIGHT_DEFL_T: 35.298
   response: 7B00462260D6A
 - expected_values:
-    ID4_FRONT_RIGHT_DEFL_T: 50.616
-  response: 7B00462260D98
+    ID4_FRONT_RIGHT_DEFL_T: 54.612
+  response: 7B00462260DA4
