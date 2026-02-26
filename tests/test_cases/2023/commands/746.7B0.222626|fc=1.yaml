@@ -8,4 +8,4 @@ test_cases:
   response: 7B00662262600CEC8
 - expected_values:
     ID4_FRONT_RIGHT_T_FLAP_ACT: 100
-  response: 7B00662262600D2C8
+  response: 7B00662262600D4C8
