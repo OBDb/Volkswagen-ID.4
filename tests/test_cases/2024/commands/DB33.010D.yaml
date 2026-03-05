@@ -9,6 +9,11 @@ test_cases:
     18DAF10103410D00
     18DAF10503410D00
 - expected_values:
+    VSS: 115
+  response: |-
+    18DAF10103410D73
+    18DAF10503410D73
+- expected_values:
     VSS: 0
   response: 18DAF10503410D00
 - expected_values:
@@ -29,15 +34,10 @@ test_cases:
     18DAF10303410D00
     18DAF10103410D00
 - expected_values:
-    VSS: 112
+    VSS: 123
   response: |-
-    18DAF10503410D6F
-    18DAF10103410D70
-- expected_values:
-    VSS: 122
-  response: |-
-    18DAF10503410D7A
-    18DAF10103410D7A
+    18DAF10503410D7B
+    18DAF10103410D7B
 - expected_values:
     VSS: 124
   response: 18DAF10503410D7C
