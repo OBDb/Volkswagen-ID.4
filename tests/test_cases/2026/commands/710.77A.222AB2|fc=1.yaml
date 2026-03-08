@@ -1,0 +1,5 @@
+command_id: 710.77A.222AB2|fc=1
+test_cases:
+- expected_values:
+    ID4_HVBAT_CAP: 86.3
+  response: 77A07622AB206BE0400

@@ -1,0 +1,7 @@
+command_id: 710.77A.222AB6|fc=1
+test_cases:
+- expected_values:
+    ID4_RANGE: 133
+  response: |-
+    77A100A622AB6008500
+    77A2185000001AAAAAA
