@@ -7,6 +7,9 @@ test_cases:
     ID4_AAT_CABIN: -1
   response: 7B00462260A62
 - expected_values:
+    ID4_AAT_CABIN: 6
+  response: 7B00462260A70
+- expected_values:
     ID4_AAT_CABIN: 22
   response: 7B00462260A90
 - expected_values:

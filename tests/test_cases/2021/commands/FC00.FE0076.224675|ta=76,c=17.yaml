@@ -4,6 +4,12 @@ test_cases:
     ID4_HVBAT_V_TRAC: 334.8
   response: 17FE0076056246750D14
 - expected_values:
+    ID4_HVBAT_V_TRAC: 353.5
+  response: 17FE0076056246750DCF
+- expected_values:
+    ID4_HVBAT_V_TRAC: 355
+  response: 17FE0076056246750DDE
+- expected_values:
     ID4_HVBAT_V_TRAC: 369.5
   response: 17FE0076056246750E6F
 - expected_values:

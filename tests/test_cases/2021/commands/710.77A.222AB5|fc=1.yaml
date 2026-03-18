@@ -6,11 +6,6 @@ test_cases:
     77A100D622AB5002D00
     77A2100002D00000000
 - expected_values:
-    ID4_RANGE_EST_CAN: 232
-  response: |-
-    77A100D622AB500E800
-    77A210000E800000000
-- expected_values:
     ID4_RANGE_EST_CAN: 239
   response: |-
     77A100D622AB500EF00
@@ -21,11 +16,6 @@ test_cases:
     77A100D622AB500F100
     77A210000F100000000
 - expected_values:
-    ID4_RANGE_EST_CAN: 243
-  response: |-
-    77A100D622AB500F300
-    77A210000F300000000
-- expected_values:
     ID4_RANGE_EST_CAN: 244
   response: |-
     77A100D622AB500F400
@@ -35,13 +25,3 @@ test_cases:
   response: |-
     77A100D622AB5012900
     77A2100012900000000
-- expected_values:
-    ID4_RANGE_EST_CAN: 298
-  response: |-
-    77A100D622AB5012A00
-    77A2100012A00000000
-- expected_values:
-    ID4_RANGE_EST_CAN: 302
-  response: |-
-    77A100D622AB5012E00
-    77A2100012E00000000
