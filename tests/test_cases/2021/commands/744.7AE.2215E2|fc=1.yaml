@@ -1,6 +1,12 @@
 command_id: 744.7AE.2215E2|fc=1
 test_cases:
 - expected_values:
+    ID4_CHRGR_COOLANT_T: 5
+  response: 7AE046215E22D
+- expected_values:
+    ID4_CHRGR_COOLANT_T: 6
+  response: 7AE046215E22E
+- expected_values:
     ID4_CHRGR_COOLANT_T: 13
   response: 7AE046215E235
 - expected_values:

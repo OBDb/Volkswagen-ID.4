@@ -1,8 +1,11 @@
 command_id: 744.7AE.221DA7|fc=1
 test_cases:
 - expected_values:
+    ID4_OBC_HIGH_V_OUTPUT: 348.9
+  response: 7AE05621DA70DA1
+- expected_values:
+    ID4_OBC_HIGH_V_OUTPUT: 351.4
+  response: 7AE05621DA70DBA
+- expected_values:
     ID4_OBC_HIGH_V_OUTPUT: 365.4
   response: 7AE05621DA70E46
-- expected_values:
-    ID4_OBC_HIGH_V_OUTPUT: 376.3
-  response: 7AE05621DA70EB3
