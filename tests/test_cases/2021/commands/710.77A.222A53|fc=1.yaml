@@ -8,12 +8,12 @@ test_cases:
     77A1008622A53870207
     77A2102D4AAAAAAAAAA
 - expected_values:
-    ID4_DCDC_I: 26
-    ID4_DCDC_I_RSV: 194
-    ID4_DCDC_V_LOW: 14.4
+    ID4_DCDC_I: 30
+    ID4_DCDC_I_RSV: 190
+    ID4_DCDC_V_LOW: 14.2
   response: |-
-    77A1008622A53900219
-    77A2102C1AAAAAAAAAA
+    77A1008622A538E021D
+    77A2102BDAAAAAAAAAA
 - expected_values:
     ID4_DCDC_I: 27
     ID4_DCDC_I_RSV: 193
@@ -21,13 +21,6 @@ test_cases:
   response: |-
     77A1008622A5390021A
     77A2102C0AAAAAAAAAA
-- expected_values:
-    ID4_DCDC_I: 29
-    ID4_DCDC_I_RSV: 238
-    ID4_DCDC_V_LOW: 15
-  response: |-
-    77A1008622A5396021C
-    77A2102EDAAAAAAAAAA
 - expected_values:
     ID4_DCDC_I: 39
     ID4_DCDC_I_RSV: 228
