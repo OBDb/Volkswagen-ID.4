@@ -12,3 +12,6 @@ test_cases:
 - expected_values:
     ID4_HVBAT_I_ENG: -5.8
   response: 17FE00760562035EFFC6
+- expected_values:
+    ID4_HVBAT_I_ENG: -2.6
+  response: 17FE00760562035EFFE6
