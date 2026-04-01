@@ -16,6 +16,9 @@ test_cases:
     ID4_HVAUX_I: 3.38
   response: 17FE0076056203600152
 - expected_values:
+    ID4_HVAUX_I: 7.16
+  response: 17FE00760562036002CC
+- expected_values:
     ID4_HVAUX_I: 7.31
   response: 17FE00760562036002DB
 - expected_values:

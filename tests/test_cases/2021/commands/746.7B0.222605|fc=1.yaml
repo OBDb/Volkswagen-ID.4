@@ -12,3 +12,9 @@ test_cases:
 - expected_values:
     ID4_REFRIG_P: 10.8
   response: 7B00462260536
+- expected_values:
+    ID4_REFRIG_P: 12.4
+  response: 7B0046226053E
+- expected_values:
+    ID4_REFRIG_P: 12.8
+  response: 7B00462260540
