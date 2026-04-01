@@ -22,5 +22,8 @@ test_cases:
     ID4_HVAUX_PWR: 2.5
   response: 17FE0076056203640019
 - expected_values:
+    ID4_HVAUX_PWR: 2.7
+  response: 17FE007605620364001B
+- expected_values:
     ID4_HVAUX_PWR: 3.7
   response: 17FE0076056203640025

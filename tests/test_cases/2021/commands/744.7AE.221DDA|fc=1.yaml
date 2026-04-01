@@ -35,3 +35,8 @@ test_cases:
   response: |-
     7AE1008621DDA8E0352
     7AE2103E8CCCCCCCCCC
+- expected_values:
+    ID4_OBC_T_A: 30
+  response: |-
+    7AE1008621DDA8E0352
+    7AE2103EACCCCCCCCCC
