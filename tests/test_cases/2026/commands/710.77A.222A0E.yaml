@@ -1,0 +1,11 @@
+command_id: 710.77A.222A0E
+test_cases:
+- expected_values:
+    ID4_SSB_R: 0
+  response: 77A04622A0E00
+- expected_values:
+    ID4_SSB_R: 0.2
+  response: 77A04622A0E01
+- expected_values:
+    ID4_SSB_R: 1.2
+  response: 77A04622A0E06
