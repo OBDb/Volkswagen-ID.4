@@ -1,0 +1,18 @@
+command_id: FC00.FE007B.221E0F|ta=7B,c=17
+test_cases:
+- expected_values:
+    ID4_HVBAT_T_MIN: 6.125
+    ID4_HVBAT_T_MIN_ID: 13
+  response: 17FE007B07621E0F0188000D
+- expected_values:
+    ID4_HVBAT_T_MIN: 6.75
+    ID4_HVBAT_T_MIN_ID: 8
+  response: 17FE007B07621E0F01B00008
+- expected_values:
+    ID4_HVBAT_T_MIN: 7.875
+    ID4_HVBAT_T_MIN_ID: 13
+  response: 17FE007B07621E0F01F8000D
+- expected_values:
+    ID4_HVBAT_T_MIN: 8
+    ID4_HVBAT_T_MIN_ID: 13
+  response: 17FE007B07621E0F0200000D
