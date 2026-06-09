@@ -1,0 +1,82 @@
+command_id: 710.77A.222AB2|fc=1
+test_cases:
+- expected_values:
+    ID4_HVBAT_CAP: 67.85
+  response: 77A07622AB2054D0400
+- expected_values:
+    ID4_HVBAT_CAP: 68
+  response: 77A07622AB205500401
+- expected_values:
+    ID4_HVBAT_CAP: 72.5
+  response: |-
+    77A07622AB205AA0400
+    77A100A622AB600B300
+    77A21B3000001AAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 72.8
+  response: |-
+    77A07622AB205B00400
+    77A100A622AB600FB00
+    77A21FB000001AAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 72.95
+  response: |-
+    77A07622AB205B30400
+    77A100A622AB600CE00
+    77A21CE000001AAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 73
+  response: |-
+    77A07622AB205B40400
+    77A100A622AB600BB00
+    77A21BB00001BAAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 73.4
+  response: |-
+    77A07622AB205BC0400
+    77A07622AB205BC0400
+- expected_values:
+    ID4_HVBAT_CAP: 73.4
+  response: |-
+    77A07622AB205BC0400
+    77A100A622AB6004B00
+    77A214B000001AAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 73.55
+  response: |-
+    77A07622AB205BF0400
+    77A07622AB205BF0400
+- expected_values:
+    ID4_HVBAT_CAP: 73.6
+  response: |-
+    77A07622AB205C00400
+    77A100B622AB8000005
+    77A21BE00000000AAAA
+- expected_values:
+    ID4_HVBAT_CAP: 73.85
+  response: |-
+    77A07622AB205C50401
+    77A07622AB205C50401
+- expected_values:
+    ID4_HVBAT_CAP: 73.85
+  response: |-
+    77A07622AB205C50401
+    77A100A622AB6004C00
+    77A214C00000DAAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 74.4
+  response: |-
+    77A07622AB205D00400
+    77A07622AB205D00400
+- expected_values:
+    ID4_HVBAT_CAP: 74.95
+  response: |-
+    77A07622AB205DB0400
+    77A100A622AB600BD00
+    77A21BD000001AAAAAA
+- expected_values:
+    ID4_HVBAT_CAP: 75.95
+  response: 77A07622AB205EF0400
+- expected_values:
+    ID4_HVBAT_CAP: 327.4
+  response: 77A07622AB219940401
