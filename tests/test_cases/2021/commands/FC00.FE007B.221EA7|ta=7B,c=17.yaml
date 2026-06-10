@@ -3,3 +3,9 @@ test_cases:
 - expected_values:
     ID4_HVBAT_CELL_V_104: 4.5
   response: 17FE007B05621EA70FFE
+- expected_values:
+    ID4_HVBAT_CELL_V_104: 4.5
+  response: |-
+    17FE007B05621EA70FFE
+
+    ERR91
