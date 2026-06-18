@@ -6,6 +6,13 @@ test_cases:
     ID4_DCDC_V_LOW: 12
   response: "77A 10 0A 62 2A 53 78 01 FF \n77A 21 01 FF 00 00 AA AA AA "
 - expected_values:
+    ID4_DCDC_I: 23
+    ID4_DCDC_I_RSV: 197
+    ID4_DCDC_V_LOW: 14.4
+  response: |-
+    77A1008622A53900216
+    77A2102C4AAAAAAAAAA
+- expected_values:
     ID4_DCDC_I: 0
     ID4_DCDC_I_RSV: 0
     ID4_DCDC_V_LOW: 11.9

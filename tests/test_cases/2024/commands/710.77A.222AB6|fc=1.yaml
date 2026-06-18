@@ -16,15 +16,15 @@ test_cases:
     77A100A622AB6003F00
     77A213F00000FAAAAAA
 - expected_values:
-    ID4_RANGE: 65
-  response: |-
-    77A100A622AB6004100
-    77A2141000083AAAAAA
-- expected_values:
     ID4_RANGE: 111
   response: |-
     77A100A622AB6006F00
     77A216F000000AAAAAA
+- expected_values:
+    ID4_RANGE: 212
+  response: |-
+    77A100A622AB600D400
+    77A21D40000F1AAAAAA
 - expected_values:
     ID4_RANGE: 240
   response: |-

@@ -60,41 +60,41 @@
     {"id": "ID4_AUX_BAT_AGE_POW",  "path": "Battery", "fmt": {"bix": 168, "len": 8,  "max": 100,                                                                            "unit": "percent"     }, "name": "12V battery aging by power"},
     {"id": "ID4_AUX_BAT_CAP",      "path": "Battery", "fmt": {"bix": 176, "len": 8,  "max": 100,                                                                            "unit": "ampereHours" }, "name": "12V battery adapted capacity"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "103D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "103D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_OBC_HVDC_C", "path": "Battery", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "amps" }, "name": "On-board charger, hv/dc current"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "103E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "103E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_OBC_CYCLE_ENERGY", "path": "Battery", "fmt": { "len": 16, "max": 655.35, "div": 100, "unit": "kilowattHours" }, "name": "Cycle energy transformation"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1507"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1507"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_CHRGR_RAIL1_E", "path": "Battery", "fmt": {           "len": 24, "max": 1677721, "div": 10, "unit": "kilowattHours" }, "name": "Rail 1 energy transformation"},
     {"id": "ID4_CHRGR_RAIL2_E", "path": "Battery", "fmt": {"bix": 24, "len": 24, "max": 1677721, "div": 10, "unit": "kilowattHours" }, "name": "Rail 2 energy transformation"},
     {"id": "ID4_CHRGR_RAIL3_E", "path": "Battery", "fmt": {"bix": 48, "len": 24, "max": 1677721, "div": 10, "unit": "kilowattHours" }, "name": "Rail 3 energy transformation"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1525"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1525"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_OBC_V_PROX_A", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "millivolts" }, "name": "Voltage proximity, socket a"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "15D6"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "15D6"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_CHRGR_EFFICIENCY", "path": "Battery", "fmt": { "len": 8, "max": 100.5, "min": 75, "div": 10, "add": 75, "unit": "amps" }, "name": "Power efficiency"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "15E2"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "15E2"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_CHRGR_COOLANT_T", "path": "Battery", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "Temperature, Charger coolant"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "15EE"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "15EE"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_CHRGR_DUR_TOTAL", "path": "Battery", "fmt": { "len": 32, "max": 4294967295, "unit": "minutes" }, "name": "Charging duration total"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1DA7"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1DA7"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_OBC_HIGH_V_OUTPUT", "path": "Battery", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "volts" }, "name": "High voltage output"}
   ]},
-{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1DDA"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "744", "rax": "7AE", "fcm1": true, "cmd": {"22": "1DDA"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_OBC_T_A", "path": "Battery", "fmt": {"bix": 8, "len": 16, "max": 6498.5, "min": -55, "div": 10, "add": -55, "unit": "celsius" }, "name": "Temperature sensor, socket a"}
   ]},
@@ -187,7 +187,7 @@
     {"id": "ID4_AC_REFRIG_T_SENS1",     "path": "Climate", "fmt": {"bix": 16, "len": 16, "max": 6513.5,  "min": -40, "mul": 10, "div": 100,   "add": -40, "unit": "celsius" }, "name": "A/C refrigerant temperature, sensor 1"},
     {"id": "ID4_AC_REFRIG_T_SENS1_INT", "path": "Climate", "fmt": {"bix": 32, "len": 16, "max": 6513.5,  "min": -40, "mul": 10, "div": 100,   "add": -40, "unit": "celsius" }, "name": "A/C refrigerant temperature, sensor 1 interior"}
   ]},
-{ "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "F449"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "F449"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_APP_D", "path": "Control", "fmt": { "len": 8, "max": 100, "div": 2.55, "unit": "percent" }, "name": "Absolute pedal position, drive"}
   ]},
@@ -245,7 +245,7 @@
   "signals": [
     {"id": "ID4_ENG_ODO", "path": "Trips", "fmt": { "len": 24, "max": 200000, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
   ]},
-{ "hdr": "FC00", "rax": "FE0076", "pri": "17", "tst": "76", "cmd": {"22": "29D4"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "FC00", "rax": "FE0076", "pri": "17", "tst": "76", "cmd": {"22": "29D4"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_MOTOR_TRQ_REQ", "path": "Drivetrain", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "newtonMeters" }, "name": "Motor torque requested"}
   ]},
@@ -1038,11 +1038,11 @@
   "signals": [
     {"id": "ID4_VSS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
   ]},
-{ "hdr": "FC00", "rax": "FE00B9", "pri": "17", "tst": "B9", "cmd": {"22": "465B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "FC00", "rax": "FE00B9", "pri": "17", "tst": "B9", "cmd": {"22": "465B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_DCDC_I_ALT", "path": "Battery", "fmt": { "len": 16, "max": 4095.9375, "div": 16, "unit": "amps" }, "name": "DC-DC converter current, alternate"}
   ]},
-{ "hdr": "FC00", "rax": "FE00B9", "pri": "17", "tst": "B9", "cmd": {"22": "465D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2024 },
+{ "hdr": "FC00", "rax": "FE00B9", "pri": "17", "tst": "B9", "cmd": {"22": "465D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
     {"id": "ID4_DC_DC_V", "path": "Battery", "fmt": { "len": 16, "max": 127.998046875, "div": 512, "unit": "volts" }, "name": "DC-DC voltage"}
   ]}
