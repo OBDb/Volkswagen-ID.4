@@ -1,8 +1,8 @@
 command_id: FC00.FE007B.221EA8|ta=7B,c=17
 test_cases:
 - expected_values:
-    ID4_HVBAT_CELL_V_105: 3.97
-  response: 17FE007B05621EA80B9A
+    ID4_HVBAT_CELL_V_105: 3.915
+  response: 17FE007B05621EA80B63
 - expected_values:
     ID4_HVBAT_CELL_V_105: 4.071
   response: 17FE007B05621EA80BFF
