@@ -3,3 +3,9 @@ test_cases:
 - expected_values:
     ID4_STEER_ANGLE: 1.8
   response: 17FE0076056203460012
+- expected_values:
+    ID4_STEER_ANGLE: 2.8
+  response: 17FE007605620346001C
+- expected_values:
+    ID4_STEER_ANGLE: 27.8
+  response: 17FE0076056203460116
