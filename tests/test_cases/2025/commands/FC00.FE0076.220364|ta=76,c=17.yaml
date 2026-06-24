@@ -3,3 +3,6 @@ test_cases:
 - expected_values:
     ID4_HVAUX_PWR: 0.5
   response: 17FE0076056203640005
+- expected_values:
+    ID4_HVAUX_PWR: 1.5
+  response: 17FE007605620364000F

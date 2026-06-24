@@ -4,6 +4,18 @@ test_cases:
     ID4_SOC: 43
   response: 17FE007605623DEF10CC
 - expected_values:
+    ID4_SOC: 55
+  response: 17FE007605623DEF157C
+- expected_values:
+    ID4_SOC: 55.5
+  response: 17FE007605623DEF15AE
+- expected_values:
+    ID4_SOC: 56
+  response: 17FE007605623DEF15E0
+- expected_values:
+    ID4_SOC: 56.5
+  response: 17FE007605623DEF1612
+- expected_values:
     ID4_SOC: 64.5
   response: 17FE007605623DEF1932
 - expected_values:

@@ -15,3 +15,6 @@ test_cases:
 - expected_values:
     ID4_HVBAT_V_BEFORE: 349.53101
   response: 17FE007B05621E362BB1
+- expected_values:
+    ID4_HVBAT_V_BEFORE: 357.49975
+  response: 17FE007B05621E362CB0
