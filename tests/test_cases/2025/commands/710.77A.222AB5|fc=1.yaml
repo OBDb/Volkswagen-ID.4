@@ -16,6 +16,11 @@ test_cases:
     77A100D622AB5011500
     77A2100011500000000
 - expected_values:
+    ID4_RANGE_EST_CAN: 299
+  response: |-
+    77A100D622AB5012B00
+    77A2100012B00000000
+- expected_values:
     ID4_RANGE_EST_CAN: 322
   response: |-
     77A100D622AB5014200
