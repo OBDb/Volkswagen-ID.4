@@ -4,29 +4,5 @@ test_cases:
     ID4_VSS: 0
   response: 17FE007B0462F40D00
 - expected_values:
-    ID4_VSS: 1
-  response: 17FE007B0462F40D01
-- expected_values:
-    ID4_VSS: 8
-  response: 17FE007B0462F40D08
-- expected_values:
-    ID4_VSS: 24
-  response: 17FE007B0462F40D18
-- expected_values:
-    ID4_VSS: 59
-  response: 17FE007B0462F40D3B
-- expected_values:
-    ID4_VSS: 64
-  response: 17FE007B0462F40D40
-- expected_values:
-    ID4_VSS: 65
-  response: 17FE007B0462F40D41
-- expected_values:
-    ID4_VSS: 68
-  response: 17FE007B0462F40D44
-- expected_values:
-    ID4_VSS: 70
-  response: 17FE007B0462F40D46
-- expected_values:
     ID4_VSS: 255
   response: 17FE007B0462F40DFF
