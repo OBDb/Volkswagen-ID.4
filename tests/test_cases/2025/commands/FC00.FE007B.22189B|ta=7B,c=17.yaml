@@ -9,3 +9,9 @@ test_cases:
 - expected_values:
     ID4_HVBAT_AFTER_CONTACTS_V: 358.5
   response: 17FE007B0562189B0A9D
+- expected_values:
+    ID4_HVBAT_AFTER_CONTACTS_V: 366.5
+  response: 17FE007B0562189B0AAD
+- expected_values:
+    ID4_HVBAT_AFTER_CONTACTS_V: 367.5
+  response: 17FE007B0562189B0AAF

@@ -7,5 +7,23 @@ test_cases:
     ID4_AAT_CABIN: 10
   response: 7B00462260A78
 - expected_values:
+    ID4_AAT_CABIN: 28
+  response: 7B00462260A9C
+- expected_values:
+    ID4_AAT_CABIN: 28.5
+  response: 7B00462260A9D
+- expected_values:
+    ID4_AAT_CABIN: 29
+  response: 7B00462260A9E
+- expected_values:
+    ID4_AAT_CABIN: 29.5
+  response: 7B00462260A9F
+- expected_values:
+    ID4_AAT_CABIN: 30.5
+  response: 7B00462260AA1
+- expected_values:
+    ID4_AAT_CABIN: 32
+  response: 7B00462260AA4
+- expected_values:
     ID4_AAT_CABIN: 33
   response: 7B00462260AA6

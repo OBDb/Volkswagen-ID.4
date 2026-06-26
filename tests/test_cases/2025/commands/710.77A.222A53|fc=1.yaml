@@ -15,19 +15,26 @@ test_cases:
     77A100A622A538C0218
     77A21028E0200AAAAAA
 - expected_values:
-    ID4_DCDC_I: 27
-    ID4_DCDC_I_RSV: 141
-    ID4_DCDC_V_LOW: 14
-  response: |-
-    77A100A622A538C021A
-    77A21028C0200AAAAAA
-- expected_values:
     ID4_DCDC_I: 24
     ID4_DCDC_I_RSV: 144
     ID4_DCDC_V_LOW: 14.1
   response: |-
     77A100A622A538D0217
     77A21028F0200AAAAAA
+- expected_values:
+    ID4_DCDC_I: 23
+    ID4_DCDC_I_RSV: 145
+    ID4_DCDC_V_LOW: 14.2
+  response: |-
+    77A100A622A538E0216
+    77A2102900200AAAAAA
+- expected_values:
+    ID4_DCDC_I: 32
+    ID4_DCDC_I_RSV: 136
+    ID4_DCDC_V_LOW: 14.3
+  response: |-
+    77A100A622A538F021F
+    77A2102870200AAAAAA
 - expected_values:
     ID4_DCDC_I: 23
     ID4_DCDC_I_RSV: 218

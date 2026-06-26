@@ -9,3 +9,9 @@ test_cases:
 - expected_values:
     ID4_COOLANT_CIRC_PUMP_DUTY: 58.97
   response: 17FE00760562276D1709
+- expected_values:
+    ID4_COOLANT_CIRC_PUMP_DUTY: 62.16
+  response: 17FE00760562276D1848
+- expected_values:
+    ID4_COOLANT_CIRC_PUMP_DUTY: 62.48
+  response: 17FE00760562276D1868
