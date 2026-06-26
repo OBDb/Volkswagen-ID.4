@@ -4,29 +4,8 @@ test_cases:
     ID4_HVBAT_CELL_V_050: 3.639
   response: 17FE007B05621E710A4F
 - expected_values:
-    ID4_HVBAT_CELL_V_050: 3.64
-  response: 17FE007B05621E710A50
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 3.724
-  response: 17FE007B05621E710AA4
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 3.735
-  response: 17FE007B05621E710AAF
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 4.048
-  response: 17FE007B05621E710BE8
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 4.049
-  response: 17FE007B05621E710BE9
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 4.05
-  response: 17FE007B05621E710BEA
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 4.051
-  response: 17FE007B05621E710BEB
-- expected_values:
-    ID4_HVBAT_CELL_V_050: 4.052
-  response: 17FE007B05621E710BEC
+    ID4_HVBAT_CELL_V_050: 3.827
+  response: 17FE007B05621E710B0B
 - expected_values:
     ID4_HVBAT_CELL_V_050: 4.054
   response: 17FE007B05621E710BEE

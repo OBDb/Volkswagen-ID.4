@@ -4,6 +4,9 @@ test_cases:
     ID4_HVAC_EVAP_T: 50
   response: '7B0 05 62 26 12 01 F4 '
 - expected_values:
+    ID4_HVAC_EVAP_T: 41
+  response: 7B005622612019A
+- expected_values:
     ID4_HVAC_EVAP_T: 47
   response: 7B00562261201D6
 - expected_values:
