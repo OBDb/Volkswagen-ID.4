@@ -9,6 +9,12 @@ test_cases:
     ID4_RECIRC_FLAP_CMD_STEPS: 623
   response: 7B00562261F026F
 - expected_values:
+    ID4_RECIRC_FLAP_CMD_STEPS: 735
+  response: 7B00562261F02DF
+- expected_values:
+    ID4_RECIRC_FLAP_CMD_STEPS: 774
+  response: 7B00562261F0306
+- expected_values:
     ID4_RECIRC_FLAP_CMD_STEPS: 782
   response: 7B00562261F030E
 - expected_values:

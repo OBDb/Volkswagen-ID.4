@@ -27,3 +27,6 @@ test_cases:
 - expected_values:
     ID4_SSB_R: 8.6
   response: 77A04622A0E2B
+- expected_values:
+    ID4_SSB_R: 28.6
+  response: 77A04622A0E8F

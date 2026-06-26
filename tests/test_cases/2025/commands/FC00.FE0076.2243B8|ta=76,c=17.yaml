@@ -4,23 +4,8 @@ test_cases:
     ID4_DCDC_T_COOL: 10.1
   response: 17FE0076056243B80065
 - expected_values:
-    ID4_DCDC_T_COOL: 10.2
-  response: 17FE0076056243B80066
-- expected_values:
-    ID4_DCDC_T_COOL: 10.3
-  response: 17FE0076056243B80067
-- expected_values:
-    ID4_DCDC_T_COOL: 10.4
-  response: 17FE0076056243B80068
-- expected_values:
-    ID4_DCDC_T_COOL: 10.5
-  response: 17FE0076056243B80069
-- expected_values:
-    ID4_DCDC_T_COOL: 10.6
-  response: 17FE0076056243B8006A
-- expected_values:
-    ID4_DCDC_T_COOL: 36.4
-  response: 17FE0076056243B8016C
+    ID4_DCDC_T_COOL: 32
+  response: 17FE0076056243B80140
 - expected_values:
     ID4_DCDC_T_COOL: 50.9
   response: 17FE0076056243B801FD
