@@ -7,6 +7,9 @@ test_cases:
     ID4_HVBAT_MOD_T_22: 404
   response: 17FE007B0562742A0194
 - expected_values:
+    ID4_HVBAT_MOD_T_22: 557
+  response: 17FE007B0562742A022D
+- expected_values:
     ID4_HVBAT_MOD_T_22: 573
   response: 17FE007B0562742A023D
 - expected_values:

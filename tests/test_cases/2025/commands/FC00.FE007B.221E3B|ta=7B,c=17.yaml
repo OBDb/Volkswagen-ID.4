@@ -4,26 +4,5 @@ test_cases:
     ID4_DC_BATTERY_V: 349.5
   response: 17FE007B05621E3B0576
 - expected_values:
-    ID4_DC_BATTERY_V: 357.5
-  response: 17FE007B05621E3B0596
-- expected_values:
-    ID4_DC_BATTERY_V: 357.75
-  response: 17FE007B05621E3B0597
-- expected_values:
-    ID4_DC_BATTERY_V: 358.5
-  response: 17FE007B05621E3B059A
-- expected_values:
-    ID4_DC_BATTERY_V: 361
-  response: 17FE007B05621E3B05A4
-- expected_values:
-    ID4_DC_BATTERY_V: 365.75
-  response: 17FE007B05621E3B05B7
-- expected_values:
-    ID4_DC_BATTERY_V: 366.25
-  response: 17FE007B05621E3B05B9
-- expected_values:
-    ID4_DC_BATTERY_V: 367.5
-  response: 17FE007B05621E3B05BE
-- expected_values:
-    ID4_DC_BATTERY_V: 367.75
-  response: 17FE007B05621E3B05BF
+    ID4_DC_BATTERY_V: 368.5
+  response: 17FE007B05621E3B05C2

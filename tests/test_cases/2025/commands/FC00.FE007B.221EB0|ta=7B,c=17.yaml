@@ -4,6 +4,9 @@ test_cases:
     ID4_HVBAT_MOD_T_3: 10.375
   response: 17FE007B05621EB00193
 - expected_values:
+    ID4_HVBAT_MOD_T_3: 29.75
+  response: 17FE007B05621EB0022E
+- expected_values:
     ID4_HVBAT_MOD_T_3: 31.375
   response: 17FE007B05621EB0023B
 - expected_values:

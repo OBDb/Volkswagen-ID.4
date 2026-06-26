@@ -3,3 +3,12 @@ test_cases:
 - expected_values:
     ID4_ACCEL: 0
   response: 17FE0076056245390000
+- expected_values:
+    ID4_ACCEL: 0.02
+  response: 17FE0076056245390014
+- expected_values:
+    ID4_ACCEL: 0.042
+  response: 17FE007605624539002A
+- expected_values:
+    ID4_ACCEL: -0.001
+  response: 17FE007605624539FFFF
