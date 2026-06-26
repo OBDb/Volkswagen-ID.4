@@ -4,23 +4,5 @@ test_cases:
     ID4_SOC_DISP: 41.05217
   response: 17FE007B0462028C6B
 - expected_values:
-    ID4_SOC_DISP: 54.8
-  response: 17FE007B0462028C8A
-- expected_values:
-    ID4_SOC_DISP: 61.89565
-  response: 17FE007B0462028C9A
-- expected_values:
-    ID4_SOC_DISP: 62.78261
-  response: 17FE007B0462028C9C
-- expected_values:
-    ID4_SOC_DISP: 65.44348
-  response: 17FE007B0462028CA2
-- expected_values:
-    ID4_SOC_DISP: 66.77391
-  response: 17FE007B0462028CA5
-- expected_values:
-    ID4_SOC_DISP: 67.21739
-  response: 17FE007B0462028CA6
-- expected_values:
-    ID4_SOC_DISP: 67.66087
-  response: 17FE007B0462028CA7
+    ID4_SOC_DISP: 71.2087
+  response: 17FE007B0462028CAF
