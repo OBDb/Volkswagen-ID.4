@@ -1,0 +1,8 @@
+command_id: FC00.FE007B.221622|ta=7B,c=17
+test_cases:
+- expected_values:
+    ID4_HVBAT_ECU_T: 27
+  response: 17FE007B046216224D
+- expected_values:
+    ID4_HVBAT_ECU_T: 49
+  response: 17FE007B0462162263
