@@ -4,5 +4,5 @@ test_cases:
     ID4_HVBAT_PTC_T_1: 20
   response: 17FE007B0462162346
 - expected_values:
-    ID4_HVBAT_PTC_T_1: 44
-  response: 17FE007B046216235E
+    ID4_HVBAT_PTC_T_1: 46
+  response: 17FE007B0462162360

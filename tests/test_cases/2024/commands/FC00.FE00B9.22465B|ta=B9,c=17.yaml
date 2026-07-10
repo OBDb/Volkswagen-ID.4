@@ -4,8 +4,8 @@ test_cases:
     ID4_DCDC_I_ALT: 19.1875
   response: 17FE00B90562465B0133
 - expected_values:
-    ID4_DCDC_I_ALT: 31.8125
-  response: 17FE00B90562465B01FD
+    ID4_DCDC_I_ALT: 31.9375
+  response: 17FE00B90562465B01FF
 - expected_values:
     ID4_DCDC_I_ALT: 32
   response: 17FE00B90562465B0200

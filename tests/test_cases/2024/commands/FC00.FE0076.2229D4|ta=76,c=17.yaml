@@ -4,8 +4,8 @@ test_cases:
     ID4_MOTOR_TRQ_REQ: 0
   response: 17FE0076056229D40000
 - expected_values:
-    ID4_MOTOR_TRQ_REQ: 49.4
-  response: 17FE0076056229D401EE
+    ID4_MOTOR_TRQ_REQ: 51
+  response: 17FE0076056229D401FE
 - expected_values:
     ID4_MOTOR_TRQ_REQ: 196.5
   response: 17FE0076056229D407AD
