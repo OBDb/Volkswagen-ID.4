@@ -1,0 +1,29 @@
+command_id: FC00.FE007B.227429|ta=7B,c=17
+test_cases:
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 403
+  response: 17FE007B056274290193
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 560
+  response: 17FE007B056274290230
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 574
+  response: 17FE007B05627429023E
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 575
+  response: 17FE007B05627429023F
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 576
+  response: 17FE007B056274290240
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 605
+  response: 17FE007B05627429025D
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 606
+  response: 17FE007B05627429025E
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 607
+  response: 17FE007B05627429025F
+- expected_values:
+    ID4_HVBAT_MOD_T_21: 611
+  response: 17FE007B056274290263

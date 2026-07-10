@@ -1,0 +1,20 @@
+command_id: FC00.FE007B.221624|ta=7B,c=17
+test_cases:
+- expected_values:
+    ID4_HVBAT_PTC_T_2: 13
+  response: 17FE007B046216243F
+- expected_values:
+    ID4_HVBAT_PTC_T_2: 32
+  response: 17FE007B0462162452
+- expected_values:
+    ID4_HVBAT_PTC_T_2: 40
+  response: 17FE007B046216245A
+- expected_values:
+    ID4_HVBAT_PTC_T_2: 42
+  response: 17FE007B046216245C
+- expected_values:
+    ID4_HVBAT_PTC_T_2: 44
+  response: 17FE007B046216245E
+- expected_values:
+    ID4_HVBAT_PTC_T_2: 45
+  response: 17FE007B046216245F

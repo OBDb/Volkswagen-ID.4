@@ -1,0 +1,14 @@
+command_id: 746.7B0.22261E|fc=1
+test_cases:
+- expected_values:
+    ID4_RECIRC_FLAP_ACT_PCT: 70
+    ID4_RECIRC_FLAP_ACT_STEPS: 164
+  response: 7B00662261E00A48C
+- expected_values:
+    ID4_RECIRC_FLAP_ACT_PCT: 100
+    ID4_RECIRC_FLAP_ACT_STEPS: 217
+  response: 7B00662261E00D9C8
+- expected_values:
+    ID4_RECIRC_FLAP_ACT_PCT: 100
+    ID4_RECIRC_FLAP_ACT_STEPS: 219
+  response: 7B00662261E00DBC8

@@ -1,0 +1,14 @@
+command_id: FC00.FE0076.2243B8|ta=76,c=17
+test_cases:
+- expected_values:
+    ID4_DCDC_T_COOL: 0.4
+  response: 17FE0076056243B80004
+- expected_values:
+    ID4_DCDC_T_COOL: 25.5
+  response: 17FE0076056243B800FF
+- expected_values:
+    ID4_DCDC_T_COOL: 25.7
+  response: 17FE0076056243B80101
+- expected_values:
+    ID4_DCDC_T_COOL: -9.5
+  response: 17FE0076056243B8FFA1
