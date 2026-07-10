@@ -21,3 +21,6 @@ test_cases:
 - expected_values:
     ID4_CHRGR_COOLANT_T: 35
   response: 7AE046215E24B
+- expected_values:
+    ID4_CHRGR_COOLANT_T: 36
+  response: 7AE046215E24C
