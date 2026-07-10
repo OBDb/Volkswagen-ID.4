@@ -1,0 +1,17 @@
+command_id: FC00.FE007B.221E1C|ta=7B,c=17
+test_cases:
+- expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 798.6
+  response: 17FE007B05621E1C0F99
+- expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 798.8
+  response: 17FE007B05621E1C0F9A
+- expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 799
+  response: 17FE007B05621E1C0F9B
+- expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 799.2
+  response: 17FE007B05621E1C0F9C
+- expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 900
+  response: 17FE007B05621E1C1194
