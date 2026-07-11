@@ -4,12 +4,6 @@ test_cases:
     ID4_HVBAT_CAP: 56.05
   response: 77A07622AB204610400
 - expected_values:
-    ID4_HVBAT_CAP: 56.9
-  response: 77A07622AB204720400
-- expected_values:
-    ID4_HVBAT_CAP: 76.6
-  response: 77A07622AB205FC0400
-- expected_values:
     ID4_HVBAT_CAP: 76.75
   response: 77A07622AB205FF0400
 - expected_values:
@@ -18,15 +12,6 @@ test_cases:
 - expected_values:
     ID4_HVBAT_CAP: 76.95
   response: 77A07622AB206030401
-- expected_values:
-    ID4_HVBAT_CAP: 77
-  response: 77A07622AB206040400
-- expected_values:
-    ID4_HVBAT_CAP: 77
-  response: 77A07622AB206040401
-- expected_values:
-    ID4_HVBAT_CAP: 77.35
-  response: 77A07622AB2060B0400
 - expected_values:
     ID4_HVBAT_CAP: 327.4
   response: 77A07622AB219940401

@@ -13,5 +13,8 @@ test_cases:
     ID4_HVBAT_I_LIM_DSCH: 799.2
   response: 17FE007B05621E1C0F9C
 - expected_values:
+    ID4_HVBAT_I_LIM_DSCH: 800
+  response: 17FE007B05621E1C0FA0
+- expected_values:
     ID4_HVBAT_I_LIM_DSCH: 900
   response: 17FE007B05621E1C1194
