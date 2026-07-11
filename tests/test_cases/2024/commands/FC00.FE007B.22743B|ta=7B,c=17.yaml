@@ -7,6 +7,9 @@ test_cases:
     ID4_CIRC_PUMP_FLOW: 20
   response: 17FE007B0462743B02
 - expected_values:
+    ID4_CIRC_PUMP_FLOW: 30
+  response: 17FE007B0462743B03
+- expected_values:
     ID4_CIRC_PUMP_FLOW: 60
   response: 17FE007B0462743B06
 - expected_values:

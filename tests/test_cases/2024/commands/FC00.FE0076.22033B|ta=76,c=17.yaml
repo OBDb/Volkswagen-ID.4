@@ -4,8 +4,8 @@ test_cases:
     ID4_MOTOR_TRQ_REAR: 0
   response: 17FE00760562033B0000
 - expected_values:
-    ID4_MOTOR_TRQ_REAR: -214
-  response: 17FE00760562033BFF2A
+    ID4_MOTOR_TRQ_REAR: -221
+  response: 17FE00760562033BFF23
 - expected_values:
     ID4_MOTOR_TRQ_REAR: -1
   response: 17FE00760562033BFFFF
