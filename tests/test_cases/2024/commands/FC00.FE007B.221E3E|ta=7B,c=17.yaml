@@ -4,8 +4,8 @@ test_cases:
     ID4_HVBAT_I_DC_2: -275.27
   response: 17FE007B07621E3E0001DE69
 - expected_values:
-    ID4_HVBAT_I_DC_2: -258.07
-  response: 17FE007B07621E3E0001E521
+    ID4_HVBAT_I_DC_2: -247.91
+  response: 17FE007B07621E3E0001E919
 - expected_values:
     ID4_HVBAT_I_DC_2: -181.16
   response: 17FE007B07621E3E0002032C

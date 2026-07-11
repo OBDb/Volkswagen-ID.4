@@ -1,6 +1,12 @@
 command_id: 746.7B0.2227C4|fc=1
 test_cases:
 - expected_values:
+    ID4_HVAC_INSIDE_HUM: 10.5
+    ID4_WNDSHLD_TEMP: 23.408
+  response: |-
+    7B010086227C46CF252
+    7B0218415AAAAAAAAAA
+- expected_values:
     ID4_HVAC_INSIDE_HUM: 7.5
     ID4_WNDSHLD_TEMP: 25.712
   response: |-

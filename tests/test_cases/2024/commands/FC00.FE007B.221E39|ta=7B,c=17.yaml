@@ -4,8 +4,8 @@ test_cases:
     ID4_HVBAT_V_CHG: 0
   response: 17FE007B05621E390000
 - expected_values:
-    ID4_HVBAT_V_CHG: -0.125
-  response: 17FE007B05621E39FFFC
+    ID4_HVBAT_V_CHG: -0.15625
+  response: 17FE007B05621E39FFFB
 - expected_values:
     ID4_HVBAT_V_CHG: -0.03125
   response: 17FE007B05621E39FFFF
