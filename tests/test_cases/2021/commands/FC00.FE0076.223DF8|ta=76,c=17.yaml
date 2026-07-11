@@ -4,5 +4,8 @@ test_cases:
     ID4_MOTOR_RPM: 0
   response: 17FE007605623DF80000
 - expected_values:
-    ID4_MOTOR_RPM: 6
-  response: 17FE007605623DF8000C
+    ID4_MOTOR_RPM: 764
+  response: 17FE007605623DF805F8
+- expected_values:
+    ID4_MOTOR_RPM: 12194
+  response: 17FE007605623DF85F44
