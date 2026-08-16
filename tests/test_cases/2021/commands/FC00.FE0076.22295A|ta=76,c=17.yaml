@@ -19,5 +19,11 @@ test_cases:
 
     ERR91
 - expected_values:
+    ID4_ENG_ODO: 123078
+  response: |-
+    17FE00760662295A01E0C6
+
+    ERR91
+- expected_values:
     ID4_ENG_ODO: 200000
   response: 17FE00760662295AFFFFFF
