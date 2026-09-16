@@ -1,6 +1,9 @@
 command_id: 744.7AE.2215EE|fc=1
 test_cases:
 - expected_values:
+    ID4_CHRGR_DUR_TOTAL: 8553
+  response: 7AE076215EE00002169
+- expected_values:
     ID4_CHRGR_DUR_TOTAL: 41217
   response: 7AE076215EE0000A101
 - expected_values:
@@ -24,3 +27,6 @@ test_cases:
 - expected_values:
     ID4_CHRGR_DUR_TOTAL: 236669
   response: 7AE076215EE00039C7D
+- expected_values:
+    ID4_CHRGR_DUR_TOTAL: 242930
+  response: 7AE076215EE0003B4F2
