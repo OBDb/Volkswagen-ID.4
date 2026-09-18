@@ -4,8 +4,8 @@ test_cases:
     ID4_DCDC_T_COOL: 4
   response: 17FE0076056243B80028
 - expected_values:
-    ID4_DCDC_T_COOL: 29.1
-  response: 17FE0076056243B80123
+    ID4_DCDC_T_COOL: 25.9
+  response: 17FE0076056243B80103
 - expected_values:
     ID4_DCDC_T_COOL: 36.1
   response: 17FE0076056243B80169
