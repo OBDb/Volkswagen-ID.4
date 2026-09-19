@@ -19,7 +19,7 @@ test_cases:
 - expected_values:
     ID4_GPS_SATS_TRACKED: 16
     ID4_GPS_SATS_VISIBLE: 4
-  response: 7D10662243104100A
+  response: 7D106622431041007
 - expected_values:
     ID4_GPS_SATS_TRACKED: 16
     ID4_GPS_SATS_VISIBLE: 4
