@@ -7,15 +7,15 @@ test_cases:
     18DAF105034105FF
 - expected_values:
     ECT: 215
+  response: 17FE007B034105FF
+- expected_values:
+    ECT: 215
   response: 18DAF103034105FF
 - expected_values:
     ECT: 215
   response: |-
     18DAF103034105FF
     18DAF105034105FF
-- expected_values:
-    ECT: 215
-  response: 18DAF105034105FF
 - expected_values:
     ECT: 215
   response: |-
