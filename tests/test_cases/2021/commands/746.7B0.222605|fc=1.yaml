@@ -4,5 +4,5 @@ test_cases:
     ID4_REFRIG_P: 3.4
   response: 7B00462260511
 - expected_values:
-    ID4_REFRIG_P: 12.8
-  response: 7B00462260540
+    ID4_REFRIG_P: 13.6
+  response: 7B00462260544
