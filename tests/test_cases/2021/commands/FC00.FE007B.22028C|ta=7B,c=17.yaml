@@ -1,6 +1,9 @@
 command_id: FC00.FE007B.22028C|ta=7B,c=17
 test_cases:
 - expected_values:
+    ID4_SOC_DISP: 70.76522
+  response: '17 FE 00 7B 04 62 02 8C AE '
+- expected_values:
     ID4_SOC_DISP: 17.9913
   response: 17FE007B0462028C37
 - expected_values:
