@@ -4,6 +4,9 @@ test_cases:
     ID4_REAR_DEFL_T: 26.64
   response: 7B00462263D50
 - expected_values:
+    ID4_REAR_DEFL_T: 42.624
+  response: 7B00462263D80
+- expected_values:
     ID4_REAR_DEFL_T: 47.952
   response: 7B00462263D90
 - expected_values:
