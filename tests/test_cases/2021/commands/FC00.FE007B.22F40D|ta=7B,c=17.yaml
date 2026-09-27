@@ -1,6 +1,12 @@
 command_id: FC00.FE007B.22F40D|ta=7B,c=17
 test_cases:
 - expected_values:
+    ID4_VSS: 39
+  response: '17 FE 00 7B 04 62 F4 0D 27 '
+- expected_values:
+    ID4_VSS: 51
+  response: '17 FE 00 7B 04 62 F4 0D 33 '
+- expected_values:
     ID4_VSS: 0
   response: 17FE007B0462F40D00
 - expected_values:
