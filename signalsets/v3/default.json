@@ -45,7 +45,7 @@
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "cmd": {"22": "2AB8"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_HVBAT_KWH", "path": "Battery", "fmt": { "len": 32, "max": 3276, "div": 1310770, "unit": "kilowattHours" }, "name": "HV battery energy", "description": "Energy stored in the high voltage battery"}
+    {"id": "ID4_HVBAT_KWH", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 1638, "mul": 25, "div": 1000, "unit": "kilowattHours" }, "name": "HV battery energy", "description": "Energy stored in the high voltage battery"}
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "cmd": {"22": "2AF7"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
