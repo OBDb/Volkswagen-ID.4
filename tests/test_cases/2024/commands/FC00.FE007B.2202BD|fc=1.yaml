@@ -1,0 +1,7 @@
+command_id: FC00.FE007B.2202BD|fc=1
+test_cases:
+- expected_values:
+    ID4_BMS_ODO: 36794
+  response: |-
+    17FE007B100D6202BDB0008F
+    17FE007B21BA00006A353635
