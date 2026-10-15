@@ -1,6 +1,11 @@
 command_id: 710.77A.222AB6|fc=1
 test_cases:
 - expected_values:
+    ID4_RANGE: 24
+  response: |-
+    77A100A622AB6001800
+    77A2118000049AAAAAA
+- expected_values:
     ID4_RANGE: 27
   response: |-
     77A100A622AB6001B00
@@ -35,6 +40,11 @@ test_cases:
   response: |-
     77A100A622AB600FF00
     77A21FF000001AAAAAA
+- expected_values:
+    ID4_RANGE: 257
+  response: |-
+    77A100A622AB6010101
+    77A2101000001AAAAAA
 - expected_values:
     ID4_RANGE: 326
   response: |-
