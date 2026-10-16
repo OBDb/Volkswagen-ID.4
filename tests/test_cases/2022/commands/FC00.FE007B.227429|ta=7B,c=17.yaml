@@ -4,5 +4,5 @@ test_cases:
     ID4_HVBAT_MOD_T_21: 371
   response: 17FE007B056274290173
 - expected_values:
-    ID4_HVBAT_MOD_T_21: 388
-  response: 17FE007B056274290184
+    ID4_HVBAT_MOD_T_21: 487
+  response: 17FE007B0562742901E7
