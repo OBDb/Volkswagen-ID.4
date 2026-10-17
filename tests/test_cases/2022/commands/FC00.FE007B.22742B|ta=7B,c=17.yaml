@@ -4,5 +4,5 @@ test_cases:
     ID4_HVBAT_MOD_T_23: 371
   response: 17FE007B0562742B0173
 - expected_values:
-    ID4_HVBAT_MOD_T_23: 389
-  response: 17FE007B0562742B0185
+    ID4_HVBAT_MOD_T_23: 487
+  response: 17FE007B0562742B01E7
