@@ -9,6 +9,9 @@ test_cases:
     LOAD_PCT: 100
   response: 17FE007B034104FF
 - expected_values:
+    LOAD_PCT: 100
+  response: '18 DA F1 05 03 41 04 FF '
+- expected_values:
     LOAD_PCT: 99.60784
   response: 18DAF103034104FE
 - expected_values:
