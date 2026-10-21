@@ -7,5 +7,5 @@ test_cases:
     ID4_HVBAT_CAP: 73.9
   response: 77A07622AB205C60400
 - expected_values:
-    ID4_HVBAT_CAP: 327.4
+    ID4_HVBAT_CAP: null
   response: 77A07622AB219940401

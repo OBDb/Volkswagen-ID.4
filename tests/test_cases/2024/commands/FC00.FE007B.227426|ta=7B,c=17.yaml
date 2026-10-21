@@ -1,11 +1,11 @@
 command_id: FC00.FE007B.227426|ta=7B,c=17
 test_cases:
 - expected_values:
-    ID4_HVBAT_MOD_T_18: 509
+    ID4_HVBAT_MOD_T_18: 23.625
   response: 17FE007B0562742601FD
 - expected_values:
-    ID4_HVBAT_MOD_T_18: 511
+    ID4_HVBAT_MOD_T_18: 23.875
   response: 17FE007B0562742601FF
 - expected_values:
-    ID4_HVBAT_MOD_T_18: 512
+    ID4_HVBAT_MOD_T_18: 24
   response: 17FE007B056274260200
