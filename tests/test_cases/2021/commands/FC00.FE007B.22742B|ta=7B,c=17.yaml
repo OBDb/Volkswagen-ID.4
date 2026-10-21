@@ -1,17 +1,17 @@
 command_id: FC00.FE007B.22742B|ta=7B,c=17
 test_cases:
 - expected_values:
-    ID4_HVBAT_MOD_T_23: 374
+    ID4_HVBAT_MOD_T_23: 6.75
   response: 17FE007B0562742B0176
 - expected_values:
-    ID4_HVBAT_MOD_T_23: 408
+    ID4_HVBAT_MOD_T_23: 11
   response: 17FE007B0562742B0198
 - expected_values:
-    ID4_HVBAT_MOD_T_23: 409
+    ID4_HVBAT_MOD_T_23: 11.125
   response: 17FE007B0562742B0199
 - expected_values:
-    ID4_HVBAT_MOD_T_23: 411
+    ID4_HVBAT_MOD_T_23: 11.375
   response: 17FE007B0562742B019B
 - expected_values:
-    ID4_HVBAT_MOD_T_23: 581
+    ID4_HVBAT_MOD_T_23: 32.625
   response: 17FE007B0562742B0245

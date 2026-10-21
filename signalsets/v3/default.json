@@ -1,7 +1,6 @@
 { "commands": [
 { "hdr": "710", "rax": "77A", "fcm1": true, "cmd": {"22": "15D1"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_HV_EM_PWR_LIMITATION",           "path": "Engine",  "fmt": {"bix": 8,  "len": 16, "max": 3276750, "mul": 50,              "unit": "watts"         }, "name": "Electric motor power limitation"},
     {"id": "ID4_HV_EM_NV_PWR_LIMITATION",        "path": "Engine",  "fmt": {"bix": 24, "len": 8,  "max": 12750,   "mul": 50,              "unit": "watts"         }, "name": "Electric motor non-vehicle power limitation"},
     {"id": "ID4_NV_ENERGY_REQUIREMENT",          "path": "Battery", "fmt": {"bix": 32, "len": 8,  "max": 12.75,   "mul": 50, "div": 1000, "unit": "kilowattHours" }, "name": "Non-vehicle energy requirement"},
     {"id": "ID4_HV_EM_HVBAT_ENERGY_INFORMATION", "path": "Battery", "fmt": {"bix": 40, "len": 16, "max": 3276.75, "mul": 50, "div": 1000, "unit": "kilowattHours" }, "name": "Electric motor battery energy"}
@@ -18,7 +17,7 @@
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "cmd": {"22": "2AB2"}, "freq": 86400, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_HVBAT_CAP", "path": "Battery", "fmt": { "len": 16, "max": 3276.75, "mul": 50, "div": 1000, "unit": "kilowattHours" }, "name": "HV battery, max energy"}
+    {"id": "ID4_HVBAT_CAP", "path": "Battery", "fmt": { "len": 16, "max": 327.4, "mul": 50, "div": 1000, "nullmax": 327.4, "unit": "kilowattHours" }, "name": "HV battery, max energy"}
   ]},
 { "hdr": "710", "rax": "77A", "fcm1": true, "cmd": {"22": "2AB4"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
@@ -100,7 +99,7 @@
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "0800"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_AC_COMPRESSOR_PWR_ACT", "path": "Climate", "fmt": {"bix": 40, "len": 16, "max": 65535, "unit": "watts" }, "name": "A/C compressor power, actual"}
+    {"id": "ID4_AC_COMPRESSOR_PWR_ACT", "path": "Climate", "fmt": {"bix": 40, "len": 16, "max": 65535, "nullmax": 65535, "unit": "watts" }, "name": "A/C compressor power, actual"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "2603"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
@@ -108,12 +107,11 @@
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "2605"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_REFRIG_P", "path": "Climate", "fmt": { "len": 8, "max": 51, "mul": 0.2, "unit": "bars" }, "name": "Refrigerant pressure"}
+    {"id": "ID4_REFRIG_P", "path": "Climate", "fmt": { "len": 8, "max": 51, "mul": 0.2, "nullmax": 51, "unit": "bars" }, "name": "Refrigerant pressure"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "2606"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_HVAC_FAN1_ACT", "path": "Climate", "fmt": {           "len": 16, "max": 6553.5, "div": 10, "unit": "percent" }, "name": "Radiator fan actual #1"},
-    {"id": "ID4_HVAC_FAN2_ACT", "path": "Climate", "fmt": {"bix": 16, "len": 16, "max": 6553.5, "div": 10, "unit": "percent" }, "name": "Radiator fan actual #2"}
+    {"id": "ID4_RAD_FAN_ACT_DUTY", "path": "Climate", "fmt": { "len": 8, "max": 102, "mul": 2, "div": 5, "nullmax": 102, "unit": "percent" }, "name": "Radiator fan actual duty"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "260A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
@@ -137,8 +135,8 @@
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "261E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_RECIRC_FLAP_ACT_STEPS", "path": "Climate", "fmt": {           "len": 16, "max": 65535,             "unit": "scalar"  }, "name": "Recirculation flap, actual steps"},
-    {"id": "ID4_RECIRC_FLAP_ACT_PCT",   "path": "Climate", "fmt": {"bix": 16, "len": 8,  "max": 100,   "mul": 0.5, "unit": "percent" }, "name": "Recirculation flap, actual"}
+    {"id": "ID4_RECIRC_FLAP_ACT_STEPS", "path": "Climate", "fmt": {           "len": 16, "max": 65535,             "nullmax": 65535, "unit": "scalar"  }, "name": "Recirculation flap, actual steps"},
+    {"id": "ID4_RECIRC_FLAP_ACT_PCT",   "path": "Climate", "fmt": {"bix": 16, "len": 8,  "max": 127.5, "mul": 0.5, "nullmax": 127.5, "unit": "percent" }, "name": "Recirculation flap, actual"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "261F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
@@ -154,11 +152,11 @@
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "2622"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_FRONT_LEFT_T_FLAP_ACT", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 0.5, "unit": "percent" }, "name": "Front left temperature flap actual"}
+    {"id": "ID4_FRONT_LEFT_T_FLAP_ACT", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 127.5, "mul": 0.5, "nullmax": 127.5, "unit": "percent" }, "name": "Front left temperature flap actual"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "2626"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_FRONT_RIGHT_T_FLAP_ACT", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 100, "mul": 0.5, "unit": "percent" }, "name": "Front right temperature flap actual"}
+    {"id": "ID4_FRONT_RIGHT_T_FLAP_ACT", "path": "Engine", "fmt": {"bix": 16, "len": 8, "max": 127.5, "mul": 0.5, "nullmax": 127.5, "unit": "percent" }, "name": "Front right temperature flap actual"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "263D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
@@ -179,13 +177,13 @@
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "42DB"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_CO2_CONTENT_INTERIOR", "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 25500, "mul": 100, "unit": "scalar" }, "name": "CO2 content interior"}
+    {"id": "ID4_CO2_CONTENT_INTERIOR", "path": "Climate", "fmt": {"bix": 8, "len": 8, "max": 25400, "mul": 100, "nullmax": 25400, "unit": "scalar" }, "name": "CO2 content interior"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "4EEF"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
-    {"id": "ID4_AC_REFRIG_P_SENS1",     "path": "Climate", "fmt": {           "len": 16, "max": 576.708,             "mul": 88, "div": 10000,             "unit": "bars"    }, "name": "A/C refrigerant pressure, sensor 1"},
-    {"id": "ID4_AC_REFRIG_T_SENS1",     "path": "Climate", "fmt": {"bix": 16, "len": 16, "max": 6513.5,  "min": -40, "mul": 10, "div": 100,   "add": -40, "unit": "celsius" }, "name": "A/C refrigerant temperature, sensor 1"},
-    {"id": "ID4_AC_REFRIG_T_SENS1_INT", "path": "Climate", "fmt": {"bix": 32, "len": 16, "max": 6513.5,  "min": -40, "mul": 10, "div": 100,   "add": -40, "unit": "celsius" }, "name": "A/C refrigerant temperature, sensor 1 interior"}
+    {"id": "ID4_AC_REFRIG_P_SENS1",     "path": "Climate", "fmt": {           "len": 16, "max": 576.708,             "mul": 88, "div": 10000,                               "unit": "bars"    }, "name": "A/C refrigerant pressure, sensor 1"},
+    {"id": "ID4_AC_REFRIG_T_SENS1",     "path": "Climate", "fmt": {"bix": 16, "len": 16, "max": 369.4,   "min": -40, "mul": 10, "div": 100,   "add": -40, "nullmax": 369.4, "unit": "celsius" }, "name": "A/C refrigerant temperature, sensor 1"},
+    {"id": "ID4_AC_REFRIG_T_SENS1_INT", "path": "Climate", "fmt": {"bix": 32, "len": 16, "max": 369.4,   "min": -40, "mul": 10, "div": 100,   "add": -40, "nullmax": 369.4, "unit": "celsius" }, "name": "A/C refrigerant temperature, sensor 1 interior"}
   ]},
 { "hdr": "746", "rax": "7B0", "fcm1": true, "cmd": {"22": "F449"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [
@@ -380,13 +378,13 @@
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E33"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_MAX",    "path": "Battery", "fmt": {           "len": 16, "max": 15.997, "mul": 2441, "div": 10000, "unit": "volts"  }, "name": "HV battery cell voltage, maximum"},
-    {"id": "ID4_HVBAT_CELL_V_MAX_ID", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                             "unit": "scalar" }, "name": "HV battery cell voltage max, ID"}
+    {"id": "ID4_HVBAT_CELL_V_MAX",    "path": "Battery", "fmt": {           "len": 16, "max": 15.9997, "div": 4096, "unit": "volts"  }, "name": "HV battery cell voltage, maximum"},
+    {"id": "ID4_HVBAT_CELL_V_MAX_ID", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                "unit": "scalar" }, "name": "HV battery cell voltage max, ID"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E34"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_MIN",    "path": "Battery", "fmt": {           "len": 16, "max": 15.997, "mul": 2441, "div": 10000, "unit": "volts"  }, "name": "HV battery cell voltage, minimum"},
-    {"id": "ID4_HVBAT_CELL_V_MIN_ID", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                             "unit": "scalar" }, "name": "HV battery cell voltage min, ID"}
+    {"id": "ID4_HVBAT_CELL_V_MIN",    "path": "Battery", "fmt": {           "len": 16, "max": 15.9997, "div": 4096, "unit": "volts"  }, "name": "HV battery cell voltage, minimum"},
+    {"id": "ID4_HVBAT_CELL_V_MIN_ID", "path": "Battery", "fmt": {"bix": 16, "len": 16, "max": 65535,                "unit": "scalar" }, "name": "HV battery cell voltage min, ID"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E36"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
@@ -402,11 +400,11 @@
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E3B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_DC_BATTERY_V", "path": "Battery", "fmt": { "len": 16, "max": 16383.75, "div": 4, "unit": "volts" }, "name": "DC battery voltage", "suggestedMetric": "starterBatteryVoltage"}
+    {"id": "ID4_DC_BATTERY_V", "path": "Battery", "fmt": { "len": 16, "max": 1023.5, "div": 4, "nullmax": 1023.5, "unit": "volts" }, "name": "DC battery voltage", "suggestedMetric": "starterBatteryVoltage"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E3C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_V_CELLS_SUM", "path": "Battery", "fmt": { "len": 32, "max": 524287.99, "min": -524288, "mul": 244140625, "div": 1000000000, "sign": true, "unit": "volts" }, "name": "Battery voltage, sum of all cells"}
+    {"id": "ID4_HVBAT_V_CELLS_SUM", "path": "Battery", "fmt": { "len": 32, "max": 524287.9997, "min": -524288, "div": 4096, "sign": true, "unit": "volts" }, "name": "Battery voltage, sum of all cells"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E3E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
@@ -414,435 +412,435 @@
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E40"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_001", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #1"}
+    {"id": "ID4_HVBAT_CELL_V_001", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #1"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E41"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_002", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #2"}
+    {"id": "ID4_HVBAT_CELL_V_002", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #2"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E42"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_003", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #3"}
+    {"id": "ID4_HVBAT_CELL_V_003", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #3"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E43"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_004", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #4"}
+    {"id": "ID4_HVBAT_CELL_V_004", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #4"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E44"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_005", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #5"}
+    {"id": "ID4_HVBAT_CELL_V_005", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #5"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E45"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_006", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #6"}
+    {"id": "ID4_HVBAT_CELL_V_006", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #6"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E46"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_007", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #7"}
+    {"id": "ID4_HVBAT_CELL_V_007", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #7"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E47"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_008", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #8"}
+    {"id": "ID4_HVBAT_CELL_V_008", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #8"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E48"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_009", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #9"}
+    {"id": "ID4_HVBAT_CELL_V_009", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #9"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E49"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_010", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #10"}
+    {"id": "ID4_HVBAT_CELL_V_010", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #10"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E4A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_011", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #11"}
+    {"id": "ID4_HVBAT_CELL_V_011", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #11"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E4B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_012", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #12"}
+    {"id": "ID4_HVBAT_CELL_V_012", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #12"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E4C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_013", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #13"}
+    {"id": "ID4_HVBAT_CELL_V_013", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #13"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E4D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_014", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #14"}
+    {"id": "ID4_HVBAT_CELL_V_014", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #14"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E4E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_015", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #15"}
+    {"id": "ID4_HVBAT_CELL_V_015", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #15"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E4F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_016", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #16"}
+    {"id": "ID4_HVBAT_CELL_V_016", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #16"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E50"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_017", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #17"}
+    {"id": "ID4_HVBAT_CELL_V_017", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #17"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E51"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_018", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #18"}
+    {"id": "ID4_HVBAT_CELL_V_018", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #18"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E52"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_019", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #19"}
+    {"id": "ID4_HVBAT_CELL_V_019", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #19"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E53"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_020", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #20"}
+    {"id": "ID4_HVBAT_CELL_V_020", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #20"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E54"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_021", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #21"}
+    {"id": "ID4_HVBAT_CELL_V_021", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #21"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E55"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_022", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #22"}
+    {"id": "ID4_HVBAT_CELL_V_022", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #22"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E56"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_023", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #23"}
+    {"id": "ID4_HVBAT_CELL_V_023", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #23"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E57"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_024", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #24"}
+    {"id": "ID4_HVBAT_CELL_V_024", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #24"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E58"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_025", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #25"}
+    {"id": "ID4_HVBAT_CELL_V_025", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #25"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E59"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_026", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #26"}
+    {"id": "ID4_HVBAT_CELL_V_026", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #26"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E5A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_027", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #27"}
+    {"id": "ID4_HVBAT_CELL_V_027", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #27"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E5B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_028", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #28"}
+    {"id": "ID4_HVBAT_CELL_V_028", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #28"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E5C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_029", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #29"}
+    {"id": "ID4_HVBAT_CELL_V_029", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #29"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E5D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_030", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #30"}
+    {"id": "ID4_HVBAT_CELL_V_030", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #30"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E5E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_031", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #31"}
+    {"id": "ID4_HVBAT_CELL_V_031", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #31"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E5F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_032", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #32"}
+    {"id": "ID4_HVBAT_CELL_V_032", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #32"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E60"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_033", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #33"}
+    {"id": "ID4_HVBAT_CELL_V_033", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #33"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E61"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_034", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #34"}
+    {"id": "ID4_HVBAT_CELL_V_034", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #34"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E62"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_035", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #35"}
+    {"id": "ID4_HVBAT_CELL_V_035", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #35"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E63"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_036", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #36"}
+    {"id": "ID4_HVBAT_CELL_V_036", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #36"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E64"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_037", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #37"}
+    {"id": "ID4_HVBAT_CELL_V_037", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #37"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E65"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_038", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #38"}
+    {"id": "ID4_HVBAT_CELL_V_038", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #38"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E66"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_039", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #39"}
+    {"id": "ID4_HVBAT_CELL_V_039", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #39"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E67"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_040", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #40"}
+    {"id": "ID4_HVBAT_CELL_V_040", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #40"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E68"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_041", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #41"}
+    {"id": "ID4_HVBAT_CELL_V_041", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #41"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E69"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_042", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #42"}
+    {"id": "ID4_HVBAT_CELL_V_042", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #42"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E6A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_043", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #43"}
+    {"id": "ID4_HVBAT_CELL_V_043", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #43"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E6B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_044", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #44"}
+    {"id": "ID4_HVBAT_CELL_V_044", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #44"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E6C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_045", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #45"}
+    {"id": "ID4_HVBAT_CELL_V_045", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #45"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E6D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_046", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #46"}
+    {"id": "ID4_HVBAT_CELL_V_046", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #46"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E6E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_047", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #47"}
+    {"id": "ID4_HVBAT_CELL_V_047", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #47"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E6F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_048", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #48"}
+    {"id": "ID4_HVBAT_CELL_V_048", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #48"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E70"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_049", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #49"}
+    {"id": "ID4_HVBAT_CELL_V_049", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #49"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E71"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_050", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #50"}
+    {"id": "ID4_HVBAT_CELL_V_050", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #50"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E72"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_051", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #51"}
+    {"id": "ID4_HVBAT_CELL_V_051", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #51"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E73"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_052", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #52"}
+    {"id": "ID4_HVBAT_CELL_V_052", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #52"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E74"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_053", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #53"}
+    {"id": "ID4_HVBAT_CELL_V_053", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #53"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E75"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_054", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #54"}
+    {"id": "ID4_HVBAT_CELL_V_054", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #54"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E76"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_055", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #55"}
+    {"id": "ID4_HVBAT_CELL_V_055", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #55"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E77"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_056", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #56"}
+    {"id": "ID4_HVBAT_CELL_V_056", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #56"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E78"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_057", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #57"}
+    {"id": "ID4_HVBAT_CELL_V_057", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #57"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E79"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_058", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #58"}
+    {"id": "ID4_HVBAT_CELL_V_058", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #58"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E7A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_059", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #59"}
+    {"id": "ID4_HVBAT_CELL_V_059", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #59"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E7B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_060", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #60"}
+    {"id": "ID4_HVBAT_CELL_V_060", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #60"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E7C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_061", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #61"}
+    {"id": "ID4_HVBAT_CELL_V_061", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #61"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E7D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_062", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #62"}
+    {"id": "ID4_HVBAT_CELL_V_062", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #62"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E7E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_063", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #63"}
+    {"id": "ID4_HVBAT_CELL_V_063", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #63"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E7F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_064", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #64"}
+    {"id": "ID4_HVBAT_CELL_V_064", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #64"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E80"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_065", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #65"}
+    {"id": "ID4_HVBAT_CELL_V_065", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #65"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E81"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_066", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #66"}
+    {"id": "ID4_HVBAT_CELL_V_066", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #66"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E82"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_067", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #67"}
+    {"id": "ID4_HVBAT_CELL_V_067", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #67"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E83"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_068", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #68"}
+    {"id": "ID4_HVBAT_CELL_V_068", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #68"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E84"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_069", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #69"}
+    {"id": "ID4_HVBAT_CELL_V_069", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #69"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E85"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_070", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #70"}
+    {"id": "ID4_HVBAT_CELL_V_070", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #70"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E86"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_071", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #71"}
+    {"id": "ID4_HVBAT_CELL_V_071", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #71"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E87"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_072", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #72"}
+    {"id": "ID4_HVBAT_CELL_V_072", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #72"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E88"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_073", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #73"}
+    {"id": "ID4_HVBAT_CELL_V_073", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #73"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E89"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_074", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #74"}
+    {"id": "ID4_HVBAT_CELL_V_074", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #74"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E8A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_075", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #75"}
+    {"id": "ID4_HVBAT_CELL_V_075", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #75"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E8B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_076", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #76"}
+    {"id": "ID4_HVBAT_CELL_V_076", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #76"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E8C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_077", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #77"}
+    {"id": "ID4_HVBAT_CELL_V_077", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #77"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E8D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_078", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #78"}
+    {"id": "ID4_HVBAT_CELL_V_078", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #78"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E8E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_079", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #79"}
+    {"id": "ID4_HVBAT_CELL_V_079", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #79"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E8F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_080", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #80"}
+    {"id": "ID4_HVBAT_CELL_V_080", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #80"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E90"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_081", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #81"}
+    {"id": "ID4_HVBAT_CELL_V_081", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #81"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E91"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_082", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #82"}
+    {"id": "ID4_HVBAT_CELL_V_082", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #82"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E92"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_083", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #83"}
+    {"id": "ID4_HVBAT_CELL_V_083", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #83"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E93"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_084", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #84"}
+    {"id": "ID4_HVBAT_CELL_V_084", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #84"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E94"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_085", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #85"}
+    {"id": "ID4_HVBAT_CELL_V_085", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #85"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E95"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_086", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #86"}
+    {"id": "ID4_HVBAT_CELL_V_086", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #86"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E96"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_087", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #87"}
+    {"id": "ID4_HVBAT_CELL_V_087", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #87"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E97"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_088", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #88"}
+    {"id": "ID4_HVBAT_CELL_V_088", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #88"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E98"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_089", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #89"}
+    {"id": "ID4_HVBAT_CELL_V_089", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #89"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E99"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_090", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #90"}
+    {"id": "ID4_HVBAT_CELL_V_090", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #90"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E9A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_091", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #91"}
+    {"id": "ID4_HVBAT_CELL_V_091", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #91"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E9B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_092", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #92"}
+    {"id": "ID4_HVBAT_CELL_V_092", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #92"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E9C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_093", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #93"}
+    {"id": "ID4_HVBAT_CELL_V_093", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #93"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E9D"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_094", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #94"}
+    {"id": "ID4_HVBAT_CELL_V_094", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #94"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E9E"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_095", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #95"}
+    {"id": "ID4_HVBAT_CELL_V_095", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #95"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E9F"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_096", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #96"}
+    {"id": "ID4_HVBAT_CELL_V_096", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #96"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA0"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_097", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #97"}
+    {"id": "ID4_HVBAT_CELL_V_097", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #97"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA1"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_098", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #98"}
+    {"id": "ID4_HVBAT_CELL_V_098", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #98"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA2"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_099", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #99"}
+    {"id": "ID4_HVBAT_CELL_V_099", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #99"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA3"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_100", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #100"}
+    {"id": "ID4_HVBAT_CELL_V_100", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #100"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA4"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_101", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #101"}
+    {"id": "ID4_HVBAT_CELL_V_101", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #101"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA5"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_102", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #102"}
+    {"id": "ID4_HVBAT_CELL_V_102", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #102"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA6"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_103", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #103"}
+    {"id": "ID4_HVBAT_CELL_V_103", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #103"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA7"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_104", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #104"}
+    {"id": "ID4_HVBAT_CELL_V_104", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #104"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA8"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_105", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #105"}
+    {"id": "ID4_HVBAT_CELL_V_105", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #105"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EA9"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_106", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #106"}
+    {"id": "ID4_HVBAT_CELL_V_106", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #106"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EAA"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_107", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #107"}
+    {"id": "ID4_HVBAT_CELL_V_107", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #107"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EAB"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_CELL_V_108", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "unit": "volts" }, "name": "HV battery cell voltage, #108"}
+    {"id": "ID4_HVBAT_CELL_V_108", "path": "Battery.Cells", "fmt": { "len": 16, "max": 4.5, "min": 3, "div": 1000, "add": 1, "nullmax": 4.5, "unit": "volts" }, "name": "HV battery cell voltage, #108"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1EAE"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
@@ -990,31 +988,31 @@
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "7426"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_18", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #18"}
+    {"id": "ID4_HVBAT_MOD_T_18", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #18"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "7427"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_19", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #19"}
+    {"id": "ID4_HVBAT_MOD_T_19", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #19"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "7428"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_20", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #20"}
+    {"id": "ID4_HVBAT_MOD_T_20", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #20"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "7429"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_21", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #21"}
+    {"id": "ID4_HVBAT_MOD_T_21", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #21"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "742A"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_22", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #22"}
+    {"id": "ID4_HVBAT_MOD_T_22", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #22"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "742B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_23", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #23"}
+    {"id": "ID4_HVBAT_MOD_T_23", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #23"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "742C"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_MOD_T_24", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "celsius" }, "name": "HV battery module temperature, #24"}
+    {"id": "ID4_HVBAT_MOD_T_24", "path": "Battery", "fmt": { "len": 16, "max": 87.75, "min": -40, "div": 8, "add": -40, "nullmax": 87.75, "unit": "celsius" }, "name": "HV battery module temperature, #24"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "743B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
@@ -1036,7 +1034,7 @@
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "F40D"}, "freq": 0.25, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_VSS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
+    {"id": "ID4_VSS", "path": "Movement", "fmt": { "len": 8, "max": 255, "nullmax": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed"}
   ]},
 { "hdr": "FC00", "rax": "FE00B9", "pri": "17", "tst": "B9", "cmd": {"22": "465B"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2025 },
   "signals": [

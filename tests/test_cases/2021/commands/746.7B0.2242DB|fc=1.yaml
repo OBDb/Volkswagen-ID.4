@@ -10,5 +10,5 @@ test_cases:
     ID4_CO2_CONTENT_INTERIOR: 600
   response: 7B0056242DB0006
 - expected_values:
-    ID4_CO2_CONTENT_INTERIOR: 25400
+    ID4_CO2_CONTENT_INTERIOR: null
   response: 7B0056242DB03FE
