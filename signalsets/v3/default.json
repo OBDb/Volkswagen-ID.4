@@ -1,4 +1,7 @@
-{ "commands": [
+{ "ecu": [
+    { "hdr": "746", "type": "hvac" }
+  ],
+  "commands": [
 { "hdr": "710", "rax": "77A", "fcm1": true, "cmd": {"22": "15D1"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2027 },
   "signals": [
     {"id": "ID4_HV_EM_NV_PWR_LIMITATION",        "path": "Engine",  "fmt": {"bix": 24, "len": 8,  "max": 12750,   "mul": 50,              "unit": "watts"         }, "name": "Electric motor non-vehicle power limitation"},

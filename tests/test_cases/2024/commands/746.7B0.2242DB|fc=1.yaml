@@ -1,8 +1,8 @@
 command_id: 746.7B0.2242DB|fc=1
 test_cases:
 - expected_values:
-    ID4_CO2_CONTENT_INTERIOR: null
-  response: 7B0056242DB03FE
+    ID4_CO2_CONTENT_INTERIOR: 800
+  response: 7B0056242DB0008
 - expected_values:
     ID4_CO2_CONTENT_INTERIOR: null
-  response: 7B0056242DB03FF
+  response: 7B0056242DB03FE
