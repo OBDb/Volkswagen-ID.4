@@ -4,6 +4,9 @@ test_cases:
     ID4_RECIRC_FLAP_STOP_RECIRC: 217
   response: 7B00562262100D9
 - expected_values:
+    ID4_RECIRC_FLAP_STOP_RECIRC: 864
+  response: 7B0056226210360
+- expected_values:
     ID4_RECIRC_FLAP_STOP_RECIRC: 867
   response: 7B0056226210363
 - expected_values:
