@@ -395,7 +395,7 @@
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E38"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
-    {"id": "ID4_HVBAT_V_AFTER", "path": "Battery", "fmt": { "len": 16, "max": 2047.967, "mul": 312499785, "div": 10000000000, "unit": "volts" }, "name": "Battery voltage, after main switch"}
+    {"id": "ID4_HVBAT_V_AFTER", "path": "Battery", "fmt": { "len": 16, "max": 1023.967, "min": -1023.999, "mul": 312499785, "div": 10000000000, "sign": true, "unit": "volts" }, "name": "Battery voltage, after main switch"}
   ]},
 { "hdr": "FC00", "rax": "FE007B", "pri": "17", "tst": "7B", "cmd": {"22": "1E39"}, "freq": 1, "dbgfilter": { "to": 2020, "from": 2026 },
   "signals": [
