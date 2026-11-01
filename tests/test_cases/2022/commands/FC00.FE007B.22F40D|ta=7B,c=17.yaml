@@ -6,3 +6,6 @@ test_cases:
 - expected_values:
     ID4_VSS: 112
   response: 17FE007B0462F40D70
+- expected_values:
+    ID4_VSS: null
+  response: 17FE007B0462F40DFF
