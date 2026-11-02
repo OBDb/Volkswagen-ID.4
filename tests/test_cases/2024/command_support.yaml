@@ -950,6 +950,7 @@ unsupported_commands_by_ecu:
   - 7E5.7ED.22F45B
   "DA01":
   - DA01.000001.010D
+  - DA01.000001.011C
   "DA05":
   - DA05.000005.0104
   - DA05.000005.0105
