@@ -4,8 +4,8 @@ test_cases:
     ID4_HVBAT_CELL_V_016: 3.566
   response: 17FE007B05621E4F0A06
 - expected_values:
+    ID4_HVBAT_CELL_V_016: 3.801
+  response: 17FE007B05621E4F0AF1
+- expected_values:
     ID4_HVBAT_CELL_V_016: 3.828
   response: 17FE007B05621E4F0B0C
-- expected_values:
-    ID4_HVBAT_CELL_V_016: 4.053
-  response: 17FE007B05621E4F0BED
