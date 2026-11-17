@@ -13,8 +13,8 @@ test_cases:
     VSS: 0
   response: "18 DA F1 05 03 41 0D 00 \n18 DA F1 01 03 41 0D 00 "
 - expected_values:
-    VSS: 12
-  response: "18 DA F1 05 03 41 0D 0C \n18 DA F1 01 03 41 0D 0C "
+    VSS: 45
+  response: "18 DA F1 05 03 41 0D 2D \n18 DA F1 01 03 41 0D 2D "
 - expected_values:
     VSS: 57
   response: "18 DA F1 05 03 41 0D 39 \n18 DA F1 01 03 41 0D 39 "
