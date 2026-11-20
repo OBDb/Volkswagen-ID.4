@@ -7,9 +7,6 @@ test_cases:
     ID4_ENG_ODO: 42981
   response: 17FE00760662295A00A7E5
 - expected_values:
-    ID4_ENG_ODO: 70855
-  response: 17FE00760662295A0114C7
-- expected_values:
     ID4_ENG_ODO: 94463
   response: 17FE00760662295A0170FF
 - expected_values:
@@ -27,6 +24,9 @@ test_cases:
     17FE00760662295A01E0C6
 
     ERR91
+- expected_values:
+    ID4_ENG_ODO: 131925
+  response: 17FE00760662295A020355
 - expected_values:
     ID4_ENG_ODO: 200000
   response: 17FE00760662295AFFFFFF
