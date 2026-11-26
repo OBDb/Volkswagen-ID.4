@@ -5,7 +5,7 @@ test_cases:
   response: 7B006622626002B00
 - expected_values:
     ID4_FRONT_RIGHT_T_FLAP_ACT: 100
-  response: 7B00662262600CEC8
+  response: 7B00662262600CDC8
 - expected_values:
     ID4_FRONT_RIGHT_T_FLAP_ACT: 100
   response: 7B00662262600D4C8
